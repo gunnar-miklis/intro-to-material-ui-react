@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+import App from './App';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { routes } from './pages/consts/routes.jsx';
+import { routes } from './pages/consts/routes';
 import { ThemeProvider } from '@emotion/react';
-import { theme } from './theme.jsx';
-import Error from './pages/Error/Error.jsx';
+import { theme } from './theme';
+import Error from './pages/Error/Error';
 
 
 ReactDOM.createRoot( document.getElementById( 'root' ) ).render(
