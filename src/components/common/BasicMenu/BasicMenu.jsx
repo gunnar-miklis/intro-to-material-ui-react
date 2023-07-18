@@ -1,7 +1,6 @@
 import { Menu, MenuItem } from '@mui/material';
 
 export default function BasicMenu( { anchorEl, handleClose, open, menuItems } ) {
-	console.log( menuItems );
 	return (
 		<>
 			<Menu
