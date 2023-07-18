@@ -1,4 +1,4 @@
-## Introduction to Material Ui
+## Introduction to Material Ui and JSS
 
 [React + Material UI - From zero to hero](https://www.youtube.com/playlist?list=PLDxCaNaYIuUlG5ZqoQzFE27CUOoQvOqnQ) by [The Atypical Developer](https://www.youtube.com/@theatypicaldeveloper)
 

@@ -1,15 +1,9 @@
 export const navbarStyles = {
 	drawer: {
-		'width': 320,
-		'flexShrink': 0,
 		'& .MuiDrawer-paper': {
-			'width': 320,
-			'boxSizing': 'border-box',
+			'width': '320px',
 			'backgroundColor': '#07101f',
-			'color': '#ffffffbb',
-		},
-		'$ .Mui-selected': {
-			'color': 'red',
+			'color': 'rgba(255,255,255,0.7)',
 		},
 	},
 	icons: {
@@ -18,7 +12,6 @@ export const navbarStyles = {
 	},
 	text: {
 		'& span': {
-			'marginLeft': '-10px',
 			'fontWeight': '600',
 			'fontSize': '16px',
 		},
