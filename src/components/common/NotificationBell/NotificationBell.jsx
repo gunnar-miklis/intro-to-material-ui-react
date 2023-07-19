@@ -1,12 +1,12 @@
-import React from 'react';
+import { useState } from 'react';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Badge, IconButton, Tooltip } from '@mui/material';
 import BasicMenu from '../BasicMenu/BasicMenu';
 import { notifications } from './sampleData';
 
 export default function NotificationBell( { iconColor } ) {
-	const [ open, setOpen ] = React.useState( false );
-	const [ anchorEl, setAnchorEl ] = React.useState( null );
+	const [ open, setOpen ] = useState( false );
+	const [ anchorEl, setAnchorEl ] = useState( null );
 	function handleClose() {
 		setOpen( false );
 	}
@@ -21,7 +21,6 @@ export default function NotificationBell( { iconColor } ) {
 				<IconButton
 					color={iconColor}
 					onClick={ notifications.length ? handleOpen : null }
-					anchorEl={anchorEl}
 				><Badge badgeContent={notifications.length} color='error'><NotificationsIcon /></Badge>
 				</IconButton>
 			</Tooltip>
