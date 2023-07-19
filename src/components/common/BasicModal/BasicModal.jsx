@@ -4,11 +4,9 @@ import { modalStyles } from './styles';
 
 export default function BasicModal( { open, onClose, title, subtitle, content, onSubmit } ) {
 	return (
-		<div>
-			<Modal
-				open={open}
-				onClose={onClose}
-			><Box sx={modalStyles.wrapper}>
+		<>
+			<Modal open={open} onClose={onClose} >
+				<Box sx={modalStyles.wrapper}>
 					<Typography variant="h6" component="h2">
 						{title}
 					</Typography>
@@ -17,11 +15,11 @@ export default function BasicModal( { open, onClose, title, subtitle, content, o
 					</Typography>
 					{ content }
 					<Box sx={modalStyles.buttons}>
-						<CommonButton variant='contained' onClick={onSubmit}>Submit</CommonButton>
+						<CommonButton onClick={onSubmit} variant='contained'>Submit</CommonButton>
 						<CommonButton onClick={onClose}>Cancel</CommonButton>
 					</Box>
 				</Box>
 			</Modal>
-		</div>
+		</>
 	);
 }
