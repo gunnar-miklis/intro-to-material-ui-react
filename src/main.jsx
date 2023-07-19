@@ -11,7 +11,7 @@ import Error from './pages/Error/Error';
 ReactDOM.createRoot( document.getElementById( 'root' ) ).render(
 	<ThemeProvider theme={theme}>
 
-		<BrowserRouter>
+		<BrowserRouter basename="/intro-to-material-ui-react">
 			<Routes>
 				<Route path='/' element={ <App/> } >
 					{ routes.map( ( route ) => <Route key={route.id} path={route.path} element={route.element} /> ) }
