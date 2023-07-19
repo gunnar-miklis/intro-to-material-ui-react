@@ -14,25 +14,24 @@ export default function Authentication() {
 	const [ users, setUsers ] = useState( [] );
 	const [ searchResults, setSearchResults ] = useState( users );
 
-	function getHeader() {
+	function getCardHeader() {
+		// NOTE: search functionality
 		function handleSearch( value ) {
 			filterData( value );
 		}
 		function filterData( value ) {
-			const lowerCasedValue = value.toLowerCase().trim();
-			if ( !lowerCasedValue ) setUsers( searchResults );
+			const lowerCasedValue = value.toLowerCase().trim(); // format, to make matching easier
+			if ( !lowerCasedValue ) setUsers( searchResults ); // if the searchbar is empty, set to intial/default user list
 			else {
-				const filteredData = searchResults.filter( ( item ) => {
-					return Object.keys( item ).some( ( key ) => {
+				const filteredData = searchResults.filter( ( item ) => { // filter out the true/false
+					return Object.keys( item ).some( ( key ) => { // loop through object, if one ("some") condition (.includes(value) ) is met, return true/false
 						return item[key].toString().toLowerCase().includes( lowerCasedValue );
 					} );
 				} );
 				setUsers( filteredData );
 			}
 		}
-		function addUser() {
-			setOpen( true );
-		}
+		// NOTE: create the entire card-header structure, "searchbar" + "addUser button"
 		return (
 			<Box sx={cardHeaderStyles.wrapper}>
 				<SearchBar
@@ -42,11 +41,10 @@ export default function Authentication() {
 				<Box sx={cardHeaderStyles.buttonsWrapper}>
 					<CommonButton
 						variant='contained'
-						onClick={addUser}
+						onClick={ () => setOpen( true ) }
 						size='large'
 						sx={cardHeaderStyles.addUserButton}
-					>Add user
-					</CommonButton>
+					>Add user</CommonButton>
 					<IconButton>
 						<RefreshIcon />
 					</IconButton>
@@ -55,23 +53,28 @@ export default function Authentication() {
 		);
 	}
 
-	function addNewUser( data ) {
+	// add new user to the users list
+	function addNewUserCallback( data ) {
 		users.push( { ...data } );
 		setOpen( false );
 	}
-	function getContent() {
+
+	// NOTE: create the entire card-content structure, "users list"
+	function getCardContent() {
 		return (
 			<>
-				{ users.length ? users.map( ( user, key ) => (
-					<Box key={key} sx={{ marginBottom: '20px' }}>
-						<Typography>User ID: {user.userId}</Typography>
-						<Typography>Email: {user.email}</Typography>
-						<Typography>Phone: {user.phone}</Typography>
-					</Box>
-				) ) :
+				{ users.length ?
+					users.map( ( user, key ) => (
+						<Box key={key} sx={{ marginBottom: '20px' }}>
+							<Typography>User ID: {user.userId}</Typography>
+							<Typography>Email: {user.email}</Typography>
+							<Typography>Phone: {user.phone}</Typography>
+						</Box>
+					) ) :
 					<Typography
 						align='center'
-						sx={cardContentStyles.typo}>No users for this project yet</Typography>
+						sx={cardContentStyles.typo}
+					>No users for this project yet</Typography>
 				}
 			</>
 		);
@@ -80,8 +83,8 @@ export default function Authentication() {
 	return (
 		<>
 			<GridWrapper>
-				<BasicCard header={getHeader()} content={getContent()}/>
-				<NewUserModal open={open} onClose={()=>setOpen( false )} addNewUser={addNewUser} />
+				<BasicCard header={getCardHeader()} content={getCardContent()}/>
+				<NewUserModal open={open} onClose={()=>setOpen( false )} addNewUserCallback={addNewUserCallback} />
 			</GridWrapper>
 		</>
 	);
