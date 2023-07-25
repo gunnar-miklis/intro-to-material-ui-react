@@ -58,5 +58,6 @@ module.exports = {
 			},
 		],
 		'react/prop-types': 'off',
+		'operator-linebreak': 'off'
 	},
 };
