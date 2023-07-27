@@ -22,7 +22,7 @@ export const headerStyles = {
 		alignItems: 'center',
 		justifyContent: 'space-between',
 		marginBottom: '20px',
-		marginLeft: '320px',
+		marginLeft: '22%',
 	},
 	link: {
 		'fontWeight': 500,

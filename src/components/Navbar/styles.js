@@ -1,7 +1,7 @@
 export const navbarStyles = {
 	drawer: {
 		'& .MuiDrawer-paper': {
-			width: '320px',
+			width: '22%',
 			backgroundColor: '#07101f',
 			color: 'rgba(255,255,255,0.7)',
 		},
