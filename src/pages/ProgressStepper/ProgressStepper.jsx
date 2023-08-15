@@ -10,7 +10,7 @@ const stepDescription = [
 	'Description 4️ Description 4️ Description 4️ Description 4️',
 ];
 
-export default function Database() {
+export default function ProgressStepperPage() {
 	return (
 		<>
 			<GridWrapper>

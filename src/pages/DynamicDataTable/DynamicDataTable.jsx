@@ -4,7 +4,7 @@ import BasicCard from '../../components/common/BasicCard/BasicCard';
 import { useState } from 'react';
 import BasicSnackbar from '../../components/common/BasicSnackbar/BasicSnackbar';
 
-export default function Storage() {
+export default function DynamicDataTablePage() {
 	const [ open, setOpen ] = useState( false );
 
 	const handleClose = ( event, reason ) => {

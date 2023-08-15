@@ -39,7 +39,7 @@ export default function NewUserModal( { open, onClose, addNewUserCallback } ) {
 	// 3. parse through validation schema using the "resolver"
 	const { register, handleSubmit, formState: { errors } } = useForm( { resolver: yupResolver( validationSchema ) } );
 
-	// pass input data back to the "authentication page"
+	// pass input data back to the "form input validation and searchbar page"
 	function addUser( data ) {
 		addNewUserCallback( data );
 	}

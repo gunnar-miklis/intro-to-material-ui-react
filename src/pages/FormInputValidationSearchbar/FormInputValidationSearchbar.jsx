@@ -8,7 +8,7 @@ import { useState } from 'react';
 import NewUserModal from '../../components/Modals/NewUserModal/NewUserModal';
 
 
-export default function Authentication() {
+export default function FormInputValidationSearchbarPage() {
 	const [ open, setOpen ] = useState( false );
 	const [ users, setUsers ] = useState( [] );
 	const [ searchResults, setSearchResults ] = useState( users );

@@ -5,7 +5,7 @@ import BasicSnackbar from '../../components/common/BasicSnackbar/BasicSnackbar';
 import { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
 
-export default function Functions() {
+export default function SkeletonSnackbarPage() {
 	const [ open, setOpen ] = useState( false );
 	const [ loading, setLoading ] = useState( true );
 
