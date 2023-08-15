@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, IconButton, Typography } from '@mui/material';
 import BasicCard from '../../components/common/BasicCard/BasicCard';
 import SearchBar from '../../components/common/SearchBar/SearchBar';
 import CommonButton from '../../components/common/CommonButton/CommonButton';
@@ -6,11 +6,28 @@ import GridWrapper from '../../components/common/GridWrapper/GridWrapper';
 import { cardContentStyles, cardHeaderStyles } from './styles';
 import { useState } from 'react';
 import NewUserModal from '../../components/Modals/NewUserModal/NewUserModal';
+import RefreshIcon from '@mui/icons-material/Refresh';
 
 
 export default function FormInputValidationSearchbarPage() {
 	const [ open, setOpen ] = useState( false );
-	const [ users, setUsers ] = useState( [] );
+	const [ users, setUsers ] = useState( [
+		{
+			userId: 'user123',
+			email: 'user@123.com',
+			phone: 123123123,
+		},
+		{
+			userId: 'user999',
+			email: 'user@999.com',
+			phone: 999999999,
+		},
+		{
+			userId: 'someone',
+			email: 'someone@999.de',
+			phone: 444444444,
+		},
+	] );
 	const [ searchResults, setSearchResults ] = useState( users );
 
 	function getCardHeader() {
@@ -44,6 +61,9 @@ export default function FormInputValidationSearchbarPage() {
 						size='large'
 						sx={cardHeaderStyles.addUserButton}
 					>Add user</CommonButton>
+					<IconButton>
+						<RefreshIcon onClick={()=>setUsers( [] )}/>
+					</IconButton>
 				</Box>
 			</Box>
 		);
@@ -62,9 +82,9 @@ export default function FormInputValidationSearchbarPage() {
 				{ users.length ?
 					users.map( ( user, key ) => (
 						<Box key={key} sx={{ marginBottom: '20px' }}>
-							<Typography>User ID: {user.userId}</Typography>
-							<Typography>Email: {user.email}</Typography>
-							<Typography>Phone: {user.phone}</Typography>
+							<Typography><Box component='span' sx={{ fontWeight: 'bold' }}>User ID:</Box> {user.userId}</Typography>
+							<Typography><Box component='span' sx={{ fontWeight: 'bold' }}>Email:</Box> {user.email}</Typography>
+							<Typography><Box component='span' sx={{ fontWeight: 'bold' }}>Phone:</Box> {user.phone}</Typography>
 						</Box>
 					) ) :
 					<Typography
