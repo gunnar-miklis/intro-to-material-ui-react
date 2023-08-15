@@ -32,7 +32,10 @@ export const headerStyles = {
 			cursor: 'pointer',
 		},
 	},
-	webButton: {
-		marginRight: '5px',
+	helpSection: {
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'end',
+		alignItems: 'center',
 	},
 };
