@@ -3,7 +3,10 @@ import { useState } from 'react';
 
 
 export default function DataTable( { rows, columns, loading, sx } ) {
-	const [ pageSize, setPageSize ] = useState( 2 );
+	const [ state, setState ] = useState( {
+		page: 0,
+		pageSize: 2,
+	} );
 
 	return (
 		<>
@@ -13,8 +16,8 @@ export default function DataTable( { rows, columns, loading, sx } ) {
 				loading={loading}
 				sx={sx}
 				checkboxSelection
-				paginationModel={{ page: 0, pageSize: pageSize }}
-				onPaginationModelChange={( ( change ) => setPageSize( change.pageSize ) )}
+				paginationModel={{ page: state.page, pageSize: state.pageSize }}
+				onPaginationModelChange={( ( { page, pageSize } ) => setState( { page, pageSize } ) ) }
 				pageSizeOptions={[ 2, 5, 10 ]}
 			/>
 		</>
