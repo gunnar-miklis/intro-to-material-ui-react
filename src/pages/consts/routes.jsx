@@ -1,39 +1,27 @@
-import Authentication from '../Authentication/Authentication';
-import Database from '../Database/Database';
-import Functions from '../Functions/Functions';
-import Hosting from '../Hosting/Hosting';
-import MachineLearning from '../MachineLearning/MachineLearning';
-import Storage from '../Storage/Storage';
+import FormInputValidationSearchbar from '../FormInputValidationSearchbar/FormInputValidationSearchbar';
+import ProgressStepper from '../ProgressStepper/ProgressStepper';
+import SkeletonSnackbar from '../SkeletonSnackbar/SkeletonSnackbar';
+import DynamicDataTable from '../DynamicDataTable/DynamicDataTable';
 
 export const routes = [
 	{
 		id: 1,
-		path: 'authentication',
-		element: <Authentication/>,
+		path: 'form-input-validation-and-searchbar',
+		element: <FormInputValidationSearchbar/>,
 	},
 	{
 		id: 2,
-		path: 'database',
-		element: <Database/>,
+		path: 'progress-stepper',
+		element: <ProgressStepper/>,
 	},
 	{
 		id: 3,
-		path: 'functions',
-		element: <Functions/>,
+		path: 'skeleton-and-snackbar',
+		element: <SkeletonSnackbar/>,
 	},
 	{
 		id: 4,
-		path: 'hosting',
-		element: <Hosting/>,
-	},
-	{
-		id: 5,
-		path: 'machine-learning',
-		element: <MachineLearning/>,
-	},
-	{
-		id: 6,
-		path: 'storage',
-		element: <Storage/>,
+		path: 'dynamic-data-table',
+		element: <DynamicDataTable/>,
 	},
 ];

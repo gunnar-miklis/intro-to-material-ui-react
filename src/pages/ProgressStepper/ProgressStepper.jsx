@@ -1,5 +1,5 @@
-import GridWrapper from './../../components/common/GridWrapper/GridWrapper';
-import BasicCard from './../../components/common/BasicCard/BasicCard';
+import GridWrapper from '../../components/common/GridWrapper/GridWrapper';
+import BasicCard from '../../components/common/BasicCard/BasicCard';
 import ProgessStepper from '../../components/common/ProgressStepper/ProgessStepper';
 
 const steps = [ 'Step 1', 'Step 2', 'Step 3', 'Step 4' ];

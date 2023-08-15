@@ -25,6 +25,7 @@ export default function Storage() {
 					onClose={handleClose}
 					severity='error'
 					message='Error fetching the API Data.'
+					hideDuration={9999999999999}
 				/>
 			</GridWrapper>
 		</>

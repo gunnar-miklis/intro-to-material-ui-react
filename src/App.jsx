@@ -10,7 +10,7 @@ export default function App() {
 	useEffect( () => {
 		const parsedTitle = location.pathname
 			.replace( /\//, '' )
-			.replace( /-/, ' ' ); // 'capitalize' first letter in JSS with 'textTransform'
+			.replace( /-/g, ' ' ); // 'capitalize' first letter in JSS with 'textTransform'
 		setTitle( parsedTitle );
 	}, [ location ] );
 

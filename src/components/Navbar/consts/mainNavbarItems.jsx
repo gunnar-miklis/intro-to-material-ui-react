@@ -1,45 +1,31 @@
 import PeopleIcon from '@mui/icons-material/People';
 import DnsIcon from '@mui/icons-material/Dns';
-import ImageIcon from '@mui/icons-material/Image';
 import EthernetIcon from '@mui/icons-material/SettingsEthernet';
 import InputIcon from '@mui/icons-material/SettingsInputComponent';
-import PublicIcon from '@mui/icons-material/Public';
 
 export const mainNavbarItems = [
 	{
 		id: 0,
 		icon: <PeopleIcon/>,
-		label: 'Authentication',
-		route: 'authentication',
+		label: 'Form Input, Validation and Searchbar',
+		route: 'form-input-validation-and-searchbar',
 	},
 	{
 		id: 1,
 		icon: <DnsIcon/>,
-		label: 'Database',
-		route: 'database',
+		label: 'Dynamic Data Table',
+		route: 'dynamic-data-table',
 	},
 	{
 		id: 2,
-		icon: <ImageIcon/>,
-		label: 'Storage',
-		route: 'storage',
+		icon: <InputIcon/>,
+		label: 'Progress Stepper',
+		route: 'progress-stepper',
 	},
 	{
 		id: 3,
-		icon: <PublicIcon/>,
-		label: 'Hosting',
-		route: 'hosting',
-	},
-	{
-		id: 4,
 		icon: <EthernetIcon/>,
-		label: 'Functions',
-		route: 'functions',
-	},
-	{
-		id: 5,
-		icon: <InputIcon/>,
-		label: 'Machine Learning',
-		route: 'machine-learning',
-	},
+		label: 'Skeleton and Snackbar',
+		route: 'skeleton-and-snackbar',
+	}
 ];

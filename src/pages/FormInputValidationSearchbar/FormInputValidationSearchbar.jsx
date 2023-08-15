@@ -1,8 +1,7 @@
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import BasicCard from '../../components/common/BasicCard/BasicCard';
-import RefreshIcon from '@mui/icons-material/Refresh';
 import SearchBar from '../../components/common/SearchBar/SearchBar';
-import CommonButton from './../../components/common/CommonButton/CommonButton';
+import CommonButton from '../../components/common/CommonButton/CommonButton';
 import GridWrapper from '../../components/common/GridWrapper/GridWrapper';
 import { cardContentStyles, cardHeaderStyles } from './styles';
 import { useState } from 'react';
@@ -45,9 +44,6 @@ export default function Authentication() {
 						size='large'
 						sx={cardHeaderStyles.addUserButton}
 					>Add user</CommonButton>
-					<IconButton>
-						<RefreshIcon />
-					</IconButton>
 				</Box>
 			</Box>
 		);
